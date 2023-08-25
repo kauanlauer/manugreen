@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque Agrícola</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('imagem.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        h1 {
+            text-align: center;
+            color: rgb(0, 113, 143);
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 5px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .header {
+            background-color: rgba(0, 113, 143, 0.9);
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header img {
+            max-width: 50px;
+            max-height: 50px;
+            margin-right: 10px;
+        }
+        .title {
+            display: flex;
+            align-items: center;
+        }
+        .title h1 {
+            margin: 0;
+            padding-left: 10px;
+        }
+        .menu {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            background-color: rgba(0, 113, 143, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .gallery {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            margin-top: 20px;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <img src="logo.png" alt="Logo">
+            <h1 style="color: white; margin: 0;">Estoque Agrícola</h1>
+        </div>
+        <div class="menu">
+            <a href="#" id="gallery-tab">Galeria</a>
+        </div>
+    </div>
+    <div class="content" id="content">
+        <h2>Boas-vindas ao Estoque Agrícola</h2>
+        
+     <table>
+    <tr>
+        <th style="color: rgb(0, 113, 143);">LINHA</th>
+        <th style="color: rgb(0, 113, 143);">CÓDIGO</th>
+        <th style="color: rgb(0, 113, 143);">DESCRIÇÃO</th>
+    <th style="color: rgb(255, 0, 0);">QUANTIDADE TOTAL EM ESTOQUE</th>
+        <th style="color: rgb(0, 113, 143);">UNID</th>
+        <th style="color: rgb(0, 113, 143);">PESO FILME</th>
+        <th style="color: rgb(0, 113, 143);">PESO TUBETE</th>
+        <th style="color: rgb(0, 113, 143);">PESO TOTAL BOBINA</th>
+        <th style="color: rgb(0, 113, 143);">BOBINAS POR PISO</th>
+        <th style="color: rgb(0, 113, 143);">ALTURA PISO PALLET</th>
+        <th style="color: rgb(0, 113, 143);">ALTURA MÁXIMA PALLET</th>
+        <th style="color: rgb(0, 113, 143);">BOBINAS TOTAL PALLET</th>
+    </tr>
+    <tr>
+        <td>STRETCH</td>
+        <td>30.20.40.01.0003</td>
+        <td>STRETCH MANUGREEN PLUS 3" 500 BRANCO (23,1KG) TUB. PAPEL</td>
+        <td>80</td>
+        <td>BOB</td>
+        <td>21,53</td>
+        <td>1,57</td>
+        <td>23,1</td>
+        <td>20</td>
+        <td>1 PISO</td>
+        <td>2 PISOS</td>
+        <td>40</td>
+    </tr>
+    <tr>
+        <td>STRETCH</td>
+        <td>30.20.40.01.0001</td>
+        <td>STRETCH MANUGREEN PLUS 3" 750 BRANCO (28KG) TUB. PAPEL</td>
+        <td>200</td>
+        <td>BOB</td>
+        <td>25,80</td>
+        <td>2,2</td>
+        <td>28</td>
+        <td>20</td>
+        <td>1 PISO</td>
+        <td>2 PISOS</td>
+        <td>40</td>
+    </tr>
+    <tr>
+        <td>STRETCH</td>
+        <td>60.14.01.02.0009</td>
+        <td>STC AGRINET ESPECIAL SILAGEM 3" 1250MMX3000M BR/AZ/PR</td>
+        <td>244</td>
+        <td>BOB</td>
+        <td>28</td>
+        <td>-</td>
+        <td>28</td>
+        <td>4</td>
+        <td>1 PISO</td>
+        <td>8 PISOS</td>
+        <td>32</td>
+    </tr>
+ <table class="details-table">
+    <tr>
+        <th style="color: rgb(0, 113, 143);">DESCRIÇÃO</th>
+        <th style="color: rgb(0, 113, 143);">RENDIMENTO POR BOBINA</th>
+    </tr>
+    <tr>
+        <td>STRETCH MANUGREEN PLUS 3" 500 BRANCO (23,1KG) TUB. PAPEL</td>
+        <td>Aproximadamente 1.800 M2</td>
+    </tr>
+    <tr>
+        <td>STRETCH MANUGREEN PLUS 3" 750 BRANCO (28KG)TUB. PAPEL</td>
+        <td>Aproximadamente 1.438 M2</td>
+    </tr>
+    <tr>
+        <td>STC AGRINET ESPECIAL SILAGEM 3" 1250MMX3000M BR/AZ/PR</td>
+        <td>Aproximadamente 3.000 M2</td>
+    </tr>
+</table>
+</table>
+    </div>
+    <div class="gallery" id="gallery">
+            <img src="foto1.jpg" alt="Foto 1">
+            <img src="foto2.jpg" alt="Foto 2">
+            <img src="foto3.jpg" alt="Foto 3">
+            <img src="foto4.jpg" alt="Foto 4">
+            <img src="foto5.jpg" alt="Foto 5">
+            <img src="foto6.jpg" alt="Foto 6">
+            <img src="foto7.jpg" alt="Foto 7">
+            <img src="foto8.jpg" alt="Foto 8">
+            <img src="foto9.jpg" alt="Foto 9">
+            <img src="foto10.jpg" alt="Foto 10">
+            <img src="foto11.jpg" alt="Foto 11">
+            <img src="foto12.jpg" alt="Foto 12">
+    </div>
+ 
+    <script>
+        const galleryTab = document.getElementById('gallery-tab');
+        const galleryDiv = document.getElementById('gallery');
+
+        galleryTab.addEventListener('click', e => {
+            e.preventDefault();
+            galleryDiv.style.display = 'block';
+            window.scrollTo(0, galleryDiv.offsetTop);
+        });
+    </script>
+</body>
+</html>

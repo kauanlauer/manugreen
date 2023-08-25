@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendimento por Bobina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('imagem.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        h1 {
+            text-align: center;
+            color: rgb(0, 113, 143);
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 5px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+        }
+        th {
+            background-color: #f2f2f2;
+            border-top: 1px solid #ccc;
+        }
+        .header {
+            background-color: rgba(0, 113, 143, 0.9);
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header img {
+            max-width: 50px;
+            max-height: 50px;
+            margin-right: 10px;
+        }
+        .title {
+            display: flex;
+            align-items: center;
+        }
+        .title h1 {
+            margin: 0;
+            padding-left: 10px;
+        }
+        .menu {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            background-color: rgba(0, 113, 143, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .details-table {
+            margin-top: 20px;
+            width: 100%; /* Para ocupar todo o espaço horizontal disponível */
+        }
+        .details-table th,
+        .details-table td {
+            text-align: left; /* Alinhamento à esquerda */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="Imagem de Cabeçalho" style="max-width: 150px; float: left; margin-right: 10px;">
+        <h2>Rendimento por bobina</h2>
+        <div class="menu">
+            <a href="menu.html">Início</a>
+            <a href="index.html">Estoque</a>
+            <a href="galeria.html">Galeria</a>
+        </div>
+     </div>
+    <div class="content" id="content">
+        <h2>Rendimento por bobina</h2>
+
+        <table class="details-table">
+            <tr>
+                <th style="color: rgb(0, 113, 143);">DESCRIÇÃO</th>
+                <th style="color: rgb(0, 113, 143);">RENDIMENTO POR BOBINA</th>
+            </tr>
+            <tr>
+                <td>STRETCH MANUGREEN PLUS 3" 500 BRANCO (23,1KG) TUB. PAPEL</td>
+                <td>Aproximadamente 1.800 M2</td>
+            </tr>
+            <tr>
+                <td>STRETCH MANUGREEN PLUS 3" 750 BRANCO (28KG)TUB. PAPEL</td>
+                <td>Aproximadamente 1.438 M2</td>
+            </tr>
+            <tr>
+                <td>STC AGRINET ESPECIAL SILAGEM 3" 1250MMX3000M BR/AZ/PR</td>
+                <td>Aproximadamente 3.000 M2</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
