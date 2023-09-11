@@ -91,6 +91,29 @@
         .rounded-cell {
             border-radius: 10px;
         }
+        .hidden-input {
+            display: none;
+        }
+        .editable-cell {
+            cursor: pointer;
+            text-decoration: underline;
+            color: blue;
+        }
+        .password-input {
+            display: none;
+        }
+        .quantity-input {
+            display: none;
+        }
+        .change-button {
+            display: none;
+        }
+        .change-button.show {
+            display: inline;
+            cursor: pointer;
+            text-decoration: underline;
+            color: blue;
+        }
         @media (max-width: 768px) {
             .header img {
                 max-width: 30px;
@@ -137,7 +160,7 @@
                 <th>STRETCH</th>
                 <td>30.20.40.01.0003</td>
                 <td>STRETCH MANUGREEN PLUS 3" 500 BRANCO (23,1KG) TUB. PAPEL</td>
-                <td>80</td>
+                <td class="editable-cell" id="quantity-estoque1" onclick="editQuantity(1)">10</td>
                 <td>BOB</td>
                 <td>21,53</td>
                 <td>1,57</td>
@@ -151,7 +174,7 @@
                 <th>STRETCH</th>
                 <td>30.20.40.01.0001</td>
                 <td>STRETCH MANUGREEN PLUS 3" 750 BRANCO (28KG) TUB. PAPEL</td>
-                <td>1.000</td>
+                <td class="editable-cell" id="quantity-estoque2" onclick="editQuantity(2)">200</td>
                 <td>BOB</td>
                 <td>25,80</td>
                 <td>2,2</td>
@@ -165,7 +188,7 @@
                 <th>STRETCH</th>
                 <td>60.14.01.02.0009</td>
                 <td>STC AGRINET ESPECIAL SILAGEM 3" 1250MMX3000M BR/AZ/PR</td>
-                <td>150</td>
+                <td class="editable-cell" id="quantity-estoque3" onclick="editQuantity(3)">244</td>
                 <td>BOB</td>
                 <td>28</td>
                 <td>-</td>
@@ -177,5 +200,34 @@
             </tr>
         </table>
     </div>
+    <script>
+        // Função para editar a quantidade
+        function editQuantity(id) {
+            const password = prompt("Digite a senha para alterar a quantidade:");
+            if (password === "2023") {
+                const quantityCell = document.getElementById(`quantity-estoque${id}`);
+                const currentQuantity = quantityCell.textContent;
+                const newQuantity = prompt("Digite a nova quantidade:", currentQuantity);
+                if (!isNaN(newQuantity)) {
+                    quantityCell.textContent = newQuantity;
+                    // Salvar no localStorage
+                    localStorage.setItem(`quantity-estoque${id}`, newQuantity);
+                } else {
+                    alert("Quantidade inválida.");
+                }
+            } else {
+                alert("Senha incorreta. A quantidade não foi alterada.");
+            }
+        }
+
+        // Restaurar quantidades do localStorage
+        for (let i = 1; i <= 3; i++) {
+            const savedQuantity = localStorage.getItem(`quantity-estoque${i}`);
+            if (savedQuantity !== null) {
+                const quantityCell = document.getElementById(`quantity-estoque${i}`);
+                quantityCell.textContent = savedQuantity;
+            }
+        }
+    </script>
 </body>
 </html>
